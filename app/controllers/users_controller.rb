@@ -9,7 +9,7 @@ class UsersController < ApplicationController
   end
   def update
     @user = User.find(params[:id])
-    @user.update
+    @user.update(user_params)
     redirect_to post_images_path
   end
   private
